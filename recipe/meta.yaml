@@ -1,4 +1,4 @@
-{% set version = '0.3.3.3.0' %}
+{% set version = '0.3.3.3.1' %}
 
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
@@ -12,7 +12,7 @@ source:
   url:
     - https://cran.r-project.org/src/contrib/RcppEigen_{{ version }}.tar.gz
     - https://cran.r-project.org/src/contrib/Archive/RcppEigen/RcppEigen_{{ version }}.tar.gz
-  sha256: c88e863f144ce255b7c935214ad056d5ca4d97f39386b431849b5a8b1cd8e97f
+  sha256: 14fdd2cb764d0a822e11b8f09dcf1c3c8580d416f053404732064d8f2b176f24
 
 
   # patches:
@@ -87,8 +87,8 @@ extra:
 # Package: RcppEigen
 # Type: Package
 # Title: 'Rcpp' Integration for the 'Eigen' Templated Linear Algebra Library
-# Version: 0.3.3.3.0
-# Date: 2017-04-29
+# Version: 0.3.3.3.1
+# Date: 2017-11-19
 # Author: Douglas Bates, Dirk Eddelbuettel, Romain Francois, and Yixuan Qiu; the authors of Eigen for the included version of Eigen
 # Maintainer: Dirk Eddelbuettel <edd@debian.org>
 # Copyright: See the file COPYRIGHTS for various Eigen copyright details
@@ -102,9 +102,9 @@ extra:
 # URL: http://dirk.eddelbuettel.com/code/rcpp.eigen.html
 # BugReports: https://github.com/RcppCore/RcppEigen/issues
 # NeedsCompilation: yes
-# Packaged: 2017-04-29 11:47:36.63527 UTC; edd
+# Packaged: 2017-11-19 16:27:34.705137 UTC; edd
 # Repository: CRAN
-# Date/Publication: 2017-05-01 15:10:35 UTC
+# Date/Publication: 2017-11-20 00:14:27 UTC
 
 # See
 # http://docs.continuum.io/conda/build.html for
