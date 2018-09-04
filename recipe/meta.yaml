@@ -8,7 +8,6 @@ package:
   version: {{ version|replace("-", "_") }}
 
 source:
-  fn: RcppEigen_{{ version }}.tar.gz
   url:
     - {{ cran_mirror }}/src/contrib/RcppEigen_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/RcppEigen/RcppEigen_{{ version }}.tar.gz
@@ -32,6 +31,9 @@ requirements:
     - {{native}}toolchain        # [win]
     - {{posix}}filesystem        # [win]
     - {{posix}}make
+    - {{posix}}sed               # [win]
+    - {{posix}}coreutils         # [win]
+    - {{posix}}zip               # [win]
 
   host:
     - r-base
@@ -43,7 +45,6 @@ requirements:
     - {{native}}gcc-libs         # [win]
     - r-matrix >=1.1_0
     - r-rcpp >=0.11.0
-    - libopenblas                # [osx]
 
 test:
   commands:
