@@ -1,4 +1,4 @@
-{% set version = '0.3.3.4.0' %}
+{% set version = '0.3.3.5.0' %}
 
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
@@ -11,7 +11,7 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/RcppEigen_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/RcppEigen/RcppEigen_{{ version }}.tar.gz
-  sha256: 11020c567b299b1eac95e8a4d57abf0315931286907823dc7b66c44d0dd6dad4
+  sha256: e5c6af17770c5f57b7cf2fba04ad1a519901b446e8138bfff221952458207f05
 
 build:
   merge_build_host: True  # [win]
@@ -23,7 +23,7 @@ build:
     - lib/R/lib/
     - lib/
 
-# Suggests: inline, RUnit, pkgKitten
+# Suggests: inline, RUnit, pkgKitten, microbenchmark
 requirements:
   build:
     - {{ compiler('c') }}        # [not win]
@@ -87,8 +87,8 @@ extra:
 # Package: RcppEigen
 # Type: Package
 # Title: 'Rcpp' Integration for the 'Eigen' Templated Linear Algebra Library
-# Version: 0.3.3.4.0
-# Date: 2018-02-05
+# Version: 0.3.3.5.0
+# Date: 2018-11-24
 # Author: Douglas Bates, Dirk Eddelbuettel, Romain Francois, and Yixuan Qiu; the authors of Eigen for the included version of Eigen
 # Maintainer: Dirk Eddelbuettel <edd@debian.org>
 # Copyright: See the file COPYRIGHTS for various Eigen copyright details
@@ -98,13 +98,13 @@ extra:
 # LazyLoad: yes
 # LinkingTo: Rcpp
 # Imports: Matrix (>= 1.1-0), Rcpp (>= 0.11.0), stats, utils
-# Suggests: inline, RUnit, pkgKitten
+# Suggests: inline, RUnit, pkgKitten, microbenchmark
 # URL: http://dirk.eddelbuettel.com/code/rcpp.eigen.html
 # BugReports: https://github.com/RcppCore/RcppEigen/issues
 # NeedsCompilation: yes
-# Packaged: 2018-02-06 03:28:54.209006 UTC; edd
+# Packaged: 2018-11-24 14:31:53.68243 UTC; edd
 # Repository: CRAN
-# Date/Publication: 2018-02-07 16:27:35 UTC
+# Date/Publication: 2018-11-24 19:30:07 UTC
 
 # See
 # http://docs.continuum.io/conda/build.html for
